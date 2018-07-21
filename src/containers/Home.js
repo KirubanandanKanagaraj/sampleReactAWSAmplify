@@ -8,6 +8,7 @@ export default class Home extends Component {
     Auth.currentAuthenticatedUser().then(user => {
       Auth.userAttributes(user).then(_attributes => {
         console.log(_attributes);
+        //return _attributes;
       });
     });
   };
@@ -60,20 +61,20 @@ export default class Home extends Component {
               <p>
                 <button
                   className="btn btn-primary"
-                  onClick={this.lsitAttributes()}
+                  onClick={this.lsitAttributes}
                 >
                   List Attributes
                 </button>
               </p>
               <p>
-                <button className="btn btn-primary" onClick={this.updateCity()}>
+                <button className="btn btn-primary" onClick={this.updateCity}>
                   Update City
                 </button>
               </p>
               <p>
                 <button
                   className="btn btn-primary"
-                  onClick={this.updateDataOnDynamoDB()}
+                  onClick={this.updateDataOnDynamoDB}
                 >
                   Update DB Values
                 </button>
